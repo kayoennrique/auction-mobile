@@ -30,6 +30,9 @@ const mockRequestErro = () => {
 }
 
 describe('repository/auction', () => {
+  beforeEach(() => {
+    apiAuctions.get.mockClear();
+  });
 
   describe('getAuctions', () => {
 
@@ -37,7 +40,10 @@ describe('repository/auction', () => {
       apiAuctions.get.mockImplementation(() => mockRequest(mockAuctions));
 
       const auctions = await getAuctions();
-      expect(auctions).toEqual(mockAuctions)
+      expect(auctions).toEqual(mockAuctions);
+
+      expect(apiAuctions.get).toHaveBeenCalledWith('/auctions');
+      expect(apiAuctions.get).toHaveBeenCalledTimes(1);
     });
 
     it('Must return an empty list when the request fails', async () => {
@@ -45,6 +51,9 @@ describe('repository/auction', () => {
 
       const auctions = await getAuctions();
       expect(auctions).toEqual([]);
+
+      expect(apiAuctions.get).toHaveBeenCalledWith('/auctions');
+      expect(apiAuctions.get).toHaveBeenCalledTimes(1);
     });
   });
 });
