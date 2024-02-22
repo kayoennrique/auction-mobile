@@ -1,0 +1,82 @@
+{
+  "auctions": [
+    {
+      "id": 1,
+      "name": "TV",
+      "description": "TV de LED 50\"",
+      "initialValue": 1000,
+      "icon": "tv",
+      "color": "#ffba05"
+    },
+    {
+      "id": 2,
+      "name": "Geladeira",
+      "description": "Geladeira 200 litros",
+      "initialValue": 500,
+      "icon": "cheese",
+      "color": "#6bd1ff"
+    },
+    {
+      "id": 3,
+      "name": "Fogão",
+      "description": "Fogão 6 bocas",
+      "initialValue": 800,
+      "icon": "fire",
+      "color": "#f16165"
+    },
+    {
+      "id": 4,
+      "name": "Microondas",
+      "description": "Microondas 34 litros",
+      "initialValue": 1200,
+      "icon": "cube",
+      "color": "#00c86f"
+    },
+    {
+      "id": 5,
+      "name": "Notebook",
+      "description": "Notebook Gamer",
+      "initialValue": 5000,
+      "icon": "laptop",
+      "color": "#dc6ebe"
+    },
+    {
+      "id": 6,
+      "name": "Tablet",
+      "description": "Tablet 34GB",
+      "initialValue": 1500,
+      "icon": "tablet-alt",
+      "color": "#ff8c2a"
+    },
+    {
+      "id": 7,
+      "name": "Carro",
+      "description": "Carro Popular Novo",
+      "initialValue": 50000,
+      "icon": "car",
+      "color": "#9cd33b"
+    }
+  ],
+  "bids": [
+    {
+      "valor": 1000,
+      "leilaoId": 1,
+      "id": 1
+    },
+    {
+      "valor": 1000.01,
+      "leilaoId": 1,
+      "id": 2
+    },
+    {
+      "valor": 800.01,
+      "leilaoId": 3,
+      "id": 3
+    },
+    {
+      "valor": 800.02,
+      "leilaoId": 3,
+      "id": 4
+    }
+  ]
+}
