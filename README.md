@@ -28,7 +28,7 @@ Based on this application we will create tests.
 $ git clone https://github.com/kayoennrique/auction-mobile.git
 
 # Go to ropository
-$ cd auction
+$ cd auction-mobile
 
 # Install dependencies
 $ npm install
