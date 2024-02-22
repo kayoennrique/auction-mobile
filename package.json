@@ -9,7 +9,8 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "api": "json-server --host 10.0.0.104 --watch db.json",
-    "test": "jest"
+    "test": "jest --watch --coverage=false",
+    "testFinal": "jest"
   },
   "dependencies": {
     "@react-native/assets-registry": "^0.74.0",
