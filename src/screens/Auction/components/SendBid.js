@@ -39,6 +39,7 @@ export default function SendBid({ sendBid, color }) {
       keyboardType="decimal-pad"
     />
     <TouchableOpacity
+      accessibilityHint="Enviar lance"
       onPress={validShipping}
       disabled={sending}
       style={styles.button}>
