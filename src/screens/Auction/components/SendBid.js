@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Text, TextInput, TouchableOpacity, StyleSheet, Platform } from 'react-native';
-import { BlurView } from 'expo-blur';
-import { FontAwesome5 } from '@expo/vector-icons';
+import { Text, TextInput, TouchableOpacity, StyleSheet, View } from 'react-native';
 import { SENT } from '../../../business/constants/statesBind';
 
 export default function SendBid({ sendBid, color }) {
@@ -29,24 +27,23 @@ export default function SendBid({ sendBid, color }) {
     setSending(false);
   }
 
-  return <BlurView intensity={Platform.OS === 'ios' ? 10 : 100} style={styles.bottom} tint="light">
+  return <View style={styles.bottom}>
     {!!erro && <Text style={styles.erro}>{erro}</Text>}
     {!!success && <Text style={styles.success}>{success}</Text>}
-    <TextInput 
-      value={amount} 
+    <TextInput
+      value={amount}
       onChangeText={setAmount}
       placeholder="R$"
       editable={!sending}
       style={styles.input}
       keyboardType="decimal-pad"
     />
-    <TouchableOpacity 
+    <TouchableOpacity
       onPress={validShipping}
       disabled={sending}
       style={styles.button}>
-      <FontAwesome5 name="check" size={24} color="#14181B" />
     </TouchableOpacity>
-  </BlurView>
+  </View>
 }
 
 const functionStyles = (color, erro) => StyleSheet.create({
